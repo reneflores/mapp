@@ -25,6 +25,6 @@ setup(
     entry_points='''
         [ckan.plugins]
         # Add plugins here, e.g.
-        # myplugin=ckanext.sustainhawaii.plugin:PluginClass
+        hawaii=ckanext.sustainhawaii.plugin:HawaiiThemePlugin
     ''',
 )
