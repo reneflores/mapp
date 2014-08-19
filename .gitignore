@@ -8,3 +8,4 @@ gunicorn_logs/
 .coverage
 static_collected/
 media/
+ckanext_sustainhawaii.egg-info/
