@@ -1,7 +1,9 @@
 {% block header_wrapper %}
 {% block header_account %}
   <header class="account-masthead" id="header">
-    <div class="container">
+    <div id="logo-group">
+    </div>
+    <div class="pull-right">
       {% block header_account_container_content %}
         {% if c.userobj %}
           <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
@@ -46,17 +48,24 @@
             </ul>
           </div>
         {% else %}
-          <nav class="account not-authed">
+          <nav class="account not-authed pull-right">
             <ul class="unstyled">
               {% block header_account_notlogged %}
-              <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
+              <li class="btn-header transparent pull-right">{% link_for _('Log in'), controller='user', action='login' %}</li>
               {% if h.check_access('user_create') %}
-                <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
+                <li class="btn-header transparent pull-right">{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
               {% endif %}
               {% endblock %}
             </ul>
           </nav>
         {% endif %}
+      {% endblock %}
+
+      {% block header_site_search %}
+        <form class="header-search pull-right" action="{% url_for controller='package', action='search' %}" method="get">
+            <input id="search-fld" type="text" name="q" placeholder="{{ _('Search') }}" />
+            <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
+        </form>
       {% endblock %}
     </div>
   </header>
@@ -69,7 +78,7 @@
   {% endblock %}
   <div class="container">
     {# The .header-image class hides the main text and uses image replacement for the title #}
-    <hgroup class="{{ g.header_class }}">
+    <!--<hgroup class="{{ g.header_class }}">
 
       {% block header_logo %}
         {% if g.site_logo %}
@@ -82,19 +91,9 @@
         {% endif %}
       {% endblock %}
 
-    </hgroup>
+    </hgroup>-->
 
     <div class="content">
-
-      {% block header_site_search %}
-        <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
-          <div class="field">
-            <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
-            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search') }}" />
-            <button class="btn-search" type="submit"><i class="icon-search"></i></button>
-          </div>
-        </form>
-      {% endblock %}
 
     </div>
   </div>
