@@ -15,9 +15,40 @@
     {% include "header.html" %}
   {% endblock -%}
 
+  <aside id="left-panel">
+      {% block header_site_navigation %}
+        <nav class="section navigation">
+          <ul>
+            {% block header_site_navigation_tabs %}
+              {{ h.build_nav_main(
+                ('search', _('Datasets')),
+                ('organizations_index', _('Organizations')),
+                ('group_index', _('Groups')),
+                ('about', _('About'))
+              ) }}
+            {% endblock %}
+          </ul>
+        </nav>
+      {% endblock %}
+  </aside>
+
   {# The content block allows you to replace the content of the page if needed #}
   {%- block content %}
-    {% block maintag %}<div role="main">{% endblock %}
+    {% block maintag %}<div id="main" role="main">{% endblock %}
+
+      {% block toolbar %}
+        <div id="ribbon">
+          {% block breadcrumb %}
+            {% if self.breadcrumb_content() | trim %}
+              <ol class="breadcrumb">
+                {% snippet 'snippets/home_breadcrumb_item.html' %}
+                {% block breadcrumb_content %}{% endblock %}
+              </ol>
+            {% endif %}
+          {% endblock %}
+        </div>
+      {% endblock %}
+
       <div id="content" class="container">
         {% block main_content %}
           {% block flash %}
@@ -28,19 +59,6 @@
                     {{ h.literal(message) }}
                   </div>
                 {% endfor %}
-              {% endblock %}
-            </div>
-          {% endblock %}
-
-          {% block toolbar %}
-            <div class="toolbar">
-              {% block breadcrumb %}
-                {% if self.breadcrumb_content() | trim %}
-                  <ol class="breadcrumb">
-                    {% snippet 'snippets/home_breadcrumb_item.html' %}
-                    {% block breadcrumb_content %}{% endblock %}
-                  </ol>
-                {% endif %}
               {% endblock %}
             </div>
           {% endblock %}
