@@ -1,0 +1,41 @@
+{% ckan_extends %}
+
+{% block search_input %}
+<div class="input-group {{ search_class }}">
+  <input type="text" class="search form-control" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
+  {% block search_input_button %}
+  <div class="input-group-btn">
+      <button type="submit" value="search" class="btn btn-default btn-primary">
+        <i class="icon-search"></i>
+        <span>{{ _('Submit') }}</span>
+      </button>
+  </div>
+  {% endblock %}
+</div>
+{% endblock %}
+
+{% block search_sortby %}
+    {% if sorting %}
+      <div class="form-select control-group control-order-by smart-form padding-10">
+        <label for="field-order-by" class="label col col-md-1">{{ _('Order by') }}</label>
+        <section class="col-md-2">
+            <select id="field-order-by" name="sort" class="form-control">
+              {% for label, value in sorting %}
+                {% if label and value %}
+                  <option value="{{ value }}"{% if sorting_selected == value %} selected="selected"{% endif %}>{{ label }}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+        </section>
+      </div>
+      {% block search_sortby_button %}
+      <button class="btn btn-primary js-hide btn-large" style="margin-left: 10px; margin-top: -10px;" type="submit">{{ _('Go') }}</button>
+      {% endblock %}
+    {% endif %}
+{% endblock %}
+
+{% block search_title %}
+    {% if not no_title %}
+      <h2 class="font-md">{% snippet 'snippets/search_result_text.html', query=query, count=count, type=type %}</h2>
+    {% endif %}
+{% endblock %}
