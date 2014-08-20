@@ -1,0 +1,10 @@
+.tags-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tags-list>li{
+    display: inline-block;
+    margin-bottom: 7px;
+}
