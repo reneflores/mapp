@@ -1,10 +1,10 @@
-.tags-list{
+.tag-list{
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.tags-list>li{
+.tag-list>li{
     display: inline-block;
     margin-bottom: 7px;
 }
@@ -46,6 +46,6 @@ nav ul ul {
     margin:0;
 }
 
-.activity.dd-list{
+#content{
     padding-bottom: 30px;
 }
