@@ -24,3 +24,15 @@ nav ul ul {
 #left-panel a:hover{
     color: #fff;
 }
+
+#left-panel .module{
+    padding: 5px;
+}
+
+.page_primary_action{
+    padding-bottom: 10px;
+}
+
+.content_action{
+    float: right!Important;
+}
