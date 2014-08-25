@@ -12,3 +12,15 @@
 nav ul ul {
     display: block !important;
 }
+
+#left-panel{
+    color: #a8a8a8!important;
+}
+
+#left-panel section{
+    padding-left:10px;
+}
+
+#left-panel a:hover{
+    color: #fff;
+}
