@@ -54,7 +54,7 @@
             </ul>
         </nav>
         {% else %}
-          <nav class="account not-authed pull-right">
+          <nav class="account not-authed pull-right" style="padding-top:7px;">
             <ul class="unstyled">
               {% block header_account_notlogged %}
               <li class="btn-header transparent pull-right">{% link_for _('Log in'), controller='user', action='login' %}</li>

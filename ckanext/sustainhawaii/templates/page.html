@@ -22,6 +22,7 @@
                 {% block header_site_navigation_tabs %}
                 <li><a href="/dataset"><i class="fa fa-lg fa-fw fa-map-marker"></i>{{ _('Datasets')}}</a></li>
                 <li><a href="{{ h.url_for(controller='organization', action='index') }}"><i style="width:24px;" class="glyphicon glyphicon-briefcase"></i>{{ _('Organizations')}}</a></li>
+                <li><a href="{{ h.url_for(controller='group', action='index') }}"><i style="width:24px;" class="glyphicon glyphicon-tags"></i>{{ _('Groups')}}</a></li>
                 <li><a href="{{ h.url_for(controller='home', action='about') }}"><i style="width:24px;" class="glyphicon glyphicon-info-sign"></i>{{ _('About') }}</a></li>
                 {% endblock %}
             </ul>
