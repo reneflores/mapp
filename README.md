@@ -3,6 +3,14 @@
 ## Pre-requisites:
 Setup CKAN [from source](http://docs.ckan.org/en/latest/maintaining/installing/install-from-source.html)
 
+Install the CKAN scheme extension [ckanext-scheming](https://github.com/open-data/ckanext-scheming)
+
+Specify the dataset schema to use (in your CKAN's development.ini file):
+```
+ckan.plugins = ... scheming_datasets
+
+scheming.dataset_schemas = ckanext.sustainhawaii:dataset_schema.json
+```
 
 ## Setup
 - Clone this repo:
