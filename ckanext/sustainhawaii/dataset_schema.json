@@ -42,45 +42,33 @@
       "form_snippet": "organization.html"
     },
     {
-      "field_name": "url",
-      "label": "Source",
-      "form_placeholder": "http://example.com/dataset.json",
-      "display_property": "foaf:homepage",
-      "display_snippet": "link.html"
-    },
-    {
-      "field_name": "version",
-      "label": "Version",
-      "validators": "ignore_missing unicode package_version_validator",
-      "form_placeholder": "1.0"
-    },
-    {
-      "field_name": "author",
-      "label": "Author",
-      "form_placeholder": "Joe Bloggs",
-      "display_property": "dc:creator"
-    },
-    {
-      "field_name": "author_email",
-      "label": "Author Email",
+      "field_name": "email",
+      "label": "Email",
       "form_placeholder": "joe@example.com",
       "display_property": "dc:creator",
       "display_snippet": "email.html",
-      "display_email_name_field": "author"
+      "display_email_name_field": "email"
     },
     {
-      "field_name": "maintainer",
-      "label": "Maintainer",
-      "form_placeholder": "Joe Bloggs",
-      "display_property": "dc:contributor"
+      "field_name": "address",
+      "label": "Address",
+      "validators": "not_empty unicode",
+      "form_placeholder": "123 Main Street",
+      "display_snippet": "large_text.html"
     },
     {
-      "field_name": "maintainer_email",
-      "label": "Maintainer Email",
-      "form_placeholder": "joe@example.com",
-      "display_property": "dc:contributor",
-      "display_snippet": "email.html",
-      "display_email_name_field": "maintainer"
+      "field_name": "city",
+      "label": "City",
+      "validators": "not_empty unicode",
+      "form_placeholder": "eg. Honolulu",
+      "display_snippet": "large_text.html"
+    },
+    {
+      "field_name": "postal",
+      "label": "Postal Code",
+      "validators": "not_empty unicode",
+      "form_placeholder": "eg. 12345",
+      "display_snippet": "large_text.html"
     }
   ],
   "resource_fields": [

@@ -57,3 +57,7 @@ nav ul ul {
 .select2-container {
     padding:0;
 }
+
+#field-image-upload{
+    width: 100% !important;
+}
