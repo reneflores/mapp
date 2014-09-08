@@ -36,11 +36,6 @@
       }
     },
     {
-      "field_name": "license_id",
-      "label": "License",
-      "form_snippet": "license.html"
-    },
-    {
       "field_name": "owner_org",
       "label": "Organization",
       "validators": "owner_org_validator unicode",
@@ -63,7 +58,7 @@
       "field_name": "author",
       "label": "Author",
       "form_placeholder": "Joe Bloggs",
-      "display_property": "dc:creator",
+      "display_property": "dc:creator"
     },
     {
       "field_name": "author_email",

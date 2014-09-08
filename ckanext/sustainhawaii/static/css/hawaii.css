@@ -53,3 +53,7 @@ nav ul ul {
 #content{
     padding-bottom: 30px;
 }
+
+.select2-container {
+    padding:0;
+}
