@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title> SmartAdmin </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!-- #CSS Links -->
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+		<!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+
+		<!-- SmartAdmin RTL Support is under construction
+			 This RTL CSS will be released in version 1.5
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css"> -->
+
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css">
+
+		<!-- #FAVICONS -->
+		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+		<!-- #GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+		<!-- #APP SCREEN / ICONS -->
+		<!-- Specifying a Webpage Icon for Web Clip 
+			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+		<link rel="apple-touch-icon" href="img/splash/sptouch-icon-iphone.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/splash/touch-icon-ipad.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png">
+		
+		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- Startup image for web apps -->
+		<link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+		<link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+		<link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+	</head>
+
+	<!--
+
+	TABLE OF CONTENTS.
+	
+	Use search to find needed section.
+	
+	===================================================================
+	
+	|  01. #CSS Links                |  all CSS links and file paths  |
+	|  02. #FAVICONS                 |  Favicon links and file paths  |
+	|  03. #GOOGLE FONT              |  Google font link              |
+	|  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
+	|  05. #BODY                     |  body tag                      |
+	|  06. #HEADER                   |  header tag                    |
+	|  07. #PROJECTS                 |  project lists                 |
+	|  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+	|  09. #MOBILE                   |  mobile view dropdown          |
+	|  10. #SEARCH                   |  search field                  |
+	|  11. #NAVIGATION               |  left panel & navigation       |
+	|  12. #MAIN PANEL               |  main panel                    |
+	|  13. #MAIN CONTENT             |  content holder                |
+	|  14. #PAGE FOOTER              |  page footer                   |
+	|  15. #SHORTCUT AREA            |  dropdown shortcuts area       |
+	|  16. #PLUGINS                  |  all scripts and plugins       |
+	
+	===================================================================
+	
+	-->
+	
+	<!-- #BODY -->
+	<!-- Possible Classes
+
+		* 'smart-skin-{SKIN#}'
+		* 'smart-rtl'         - Switch theme mode to RTL (will be avilable from version SmartAdmin 1.5)
+		* 'menu-on-top'       - Switch to top navigation (no DOM change required)
+		* 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
+		* 'fixed-header'      - Fixes the header
+		* 'fixed-navigation'  - Fixes the main menu
+		* 'fixed-ribbon'      - Fixes breadcrumb
+		* 'fixed-footer'      - Fixes footer
+		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
+	-->
+	<body class="smart-style-1 sustainhawaii-admin">
+
+
+
+		<!-- #NAVIGATION -->
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<aside id="left-panel">
+
+			<!-- HEADER -->
+			<header id="header">
+				<div id="logo-group">
+
+					<!-- PLACE YOUR LOGO HERE -->
+					<span id="logo"> Logotype</span>
+					<!-- END LOGO PLACEHOLDER -->
+
+					<span class="pull-right" data-action="minifyMenu"> 
+						<i class="fa fa-bars fa-2x"></i> 
+					</span>	
+
+					<a class="pull-right" href="#"> 
+						<i class="fa fa-home fa-2x"></i> 
+					</a>									
+
+				</div>
+
+			</header>
+			<!-- END HEADER -->		
+
+
+			<!-- NAVIGATION : This navigation is also responsive
+
+			To make this navigation dynamic please make sure to link the node
+			(the reference to the nav > ul) after page load. Or the navigation
+			will not initialize.
+			-->
+			<nav>
+				<!-- NOTE: Notice the gaps after each icon usage <i></i>..
+				Please note that these links work a bit different than
+				traditional href="" links. See documentation for details.
+				-->
+
+				<ul>
+
+
+					<li class="active open">
+						<a href="#"><img src="img/avatars/sunny.png" alt="me" class="online" />  <span class="menu-item-parent">Kevin Vaccarello</span></a>
+						<ul>
+							<li>
+								<a href="profile.html">My Profile</a>
+							</li>
+							<li>
+								<a href="profile-mylocations.html">My Locations</a>
+							</li>
+							<li class="active">
+								<a href="profile-myentities.html">My Entities</a>
+							</li>
+							<li>
+								<a href="#">Logout</a>
+							</li>							
+						</ul>
+					</li>	
+
+
+					<li>
+						<a href="dashboard.html"><i class="fa fa-2x fa-fw fa-tachometer"></i> <span class="menu-item-parent">Dashboard</span></a>
+					</li>
+
+					<li>
+						<a href="#"><i class="fa fa-2x fa-fw fa-file"></i> <span class="menu-item-parent">Pages</span></a>
+						<ul>
+							<li>
+								<a href="pages.html">All Pages</a>
+							</li>
+							<li>
+								<a href="pages-addpage.html">Add Page</a>
+							</li>
+						</ul>
+					</li>	
+
+
+					<li>
+						<a href="#"><i class="fa fa-2x fa-fw fa-map-marker"></i> <span class="menu-item-parent">Locations</span> <span class="badge inbox-badge">14</span></a>
+						<ul>
+							<li>
+								<a href="locations.html">All Locations</a>
+							</li>
+							<li>
+								<a href="locations-addlocation.html">Add Location</a>
+							</li>
+							<li>
+								<a href="locations-locationtypes.html">Location Types</a>
+							</li>
+							<li>
+								<a href="locations-addlocationtype.html">Add Location Type</a>
+							</li>							
+						</ul>
+					</li>	
+
+
+					<li>
+						<a href="#"><i class="fa fa-2x fa-fw fa-tag"></i> <span class="menu-item-parent">Categories</span></a>
+						<ul>
+							<li>
+								<a href="categories.html">All Categories</a>
+							</li>
+							<li>
+								<a href="categories-addcategory.html">Add Category</a>
+							</li>
+							<li>
+								<a href="categories-addtaxonomy.html">Add Taxonomy</a>
+							</li>						
+						</ul>
+					</li>		
+
+
+					<li>
+						<a href="#"><i class="fa fa-2x fa-fw fa-user"></i> <span class="menu-item-parent">Users</span></a>
+						<ul>
+							<li>
+								<a href="users.html">All Users & Entities</a>
+							</li>
+							<li>
+								<a href="users-adduser.html">Add User</a>
+							</li>
+							<li>
+								<a href="users-addentity.html">Add Entity</a>
+							</li>
+							<li>
+								<a href="users-usertypes.html">User Types</a>
+							</li>
+							<li>
+								<a href="users-addusertype.html">Add User Type</a>
+							</li>														
+						</ul>
+					</li>	
+
+
+					<li>
+						<a href="#"><i class="fa fa-2x fa-fw fa-file-text-o"></i> <span class="menu-item-parent">Forms</span></a>
+						<ul>
+							<li>
+								<a href="forms.html">All Forms</a>
+							</li>
+							<li>
+								<a href="forms-addform.html">Add Form</a>
+							</li>
+							<li>
+								<a href="forms-settings.html">Settings</a>
+							</li>													
+						</ul>
+					</li>	
+
+
+
+					<li>
+						<a href="#"><i class="fa fa-2x fa-fw fa-pie-chart"></i> <span class="menu-item-parent">Data Visualization</span></a>
+						<ul>
+							<li>
+								<a href="datavisualizations.html">All Visualizations</a>
+							</li>
+							<li>
+								<a href="data-datasubtypes.html">Data Sub-types</a>
+							</li>
+							<li>
+								<a href="data-dataconversions.html">Data Conversions</a>
+							</li>	
+							<li>
+								<a href="data-settings.html">Settings</a>
+							</li>																			
+						</ul>
+					</li>																			
+
+
+					<li>
+						<a href="#"><i class="fa fa-2x fa-fw fa-gear"></i> <span class="menu-item-parent">Settings</span></a>
+						<ul>
+							<li>
+								<a href="settings.html">Settings</a>
+							</li>
+							<li>
+								<a href="settings-plugins.html">Plugins</a>
+							</li>
+							<li>
+								<a href="settings-menus.html">Menus</a>
+							</li>	
+							<li>
+								<a href="settings-import.html">Import</a>
+							</li>																			
+						</ul>
+					</li>	
+
+				</ul>
+			</nav>
+
+
+		</aside>
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<!-- row -->
+				<div class="row">
+					
+					<!-- col -->
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<h1 class="page-title">
+							
+							<!-- PAGE HEADER -->
+								Profile 
+							<span>  
+								My Entities
+							</span>
+						</h1>
+					</div>
+					<!-- end col -->
+					
+					<!-- right side of the page with the sparkline graphs -->
+					<!-- col -->
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+
+
+
+					</div>
+
+				</div>	
+
+			</div>
+			<!-- END RIBBON -->
+			
+			
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+
+				<div class="row entity-wrap">
+
+
+					<div class="entity-block">
+
+						<div class="col-sm-9 entity-block-content">
+							<img class="pull-left" src="img/entity-logo.png" />
+							<h2>Name of the Entity <span>// 32 Locations</span></h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id tristique ante, sit amet lacinia tortor. Vivamus nec dapibus turpis.</p>						
+						</div>
+
+						<div class="col-sm-3 entity-block-buttons">
+							<a href="#" class="btn btn-default btn-lg pull-right"><i class="fa fa-angle-down fa-lg"></i> </a>
+							<a href="#" class="btn btn-default btn-lg pull-right">Delete</a>
+							<a data-toggle="modal" href="#entity-editmodal" class="btn btn-default btn-lg pull-right">Edit</a>
+						</div>
+
+					</div>
+
+					<div class="entity-locations content-block">
+
+						<header>
+							<h2>Locations</h2>
+		
+						</header>
+		
+						<!-- widget div-->
+						<div class="widget-content">
+
+							<!-- widget content -->
+							<div class="widget-body">
+		
+								<table id="locations-table" class="table table-striped table-bordered table-hover" width="100%">
+									<thead>
+										<tr>
+											<th></th>
+											<th data-class="expand">Location Name</th>
+											<th>Location Type</th>
+											<th data-hide="phone">Created</th>
+											<th>Statuss</th>
+											<th data-hide="phone">Last Updated</th>
+											<th>Options</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>																																						
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>
+										<tr>
+											<td> 
+												<label class="checkbox">
+													<input type="checkbox" name="checkbox" checked="">
+													<i></i>
+												</label> 
+											</td>
+											<td><a href="#">Name of the page</a></td>
+											<td>Location</td>
+											<td>21/01/2014</td>
+											<td>Active</td>
+											<td>21/01/2014</td>
+											<td><a href="#">Edit</a> | <a href="#">Archive</a> | <a data-toggle="modal" href="#delete-single">Delete</a></td>
+										</tr>																																																															
+									</tbody>
+								</table>
+		
+							</div>
+							<!-- end widget content -->
+
+							<div class="widget-footer">
+
+								<a class="btn btn-lg btn-default pull-right" data-toggle="modal" href="#delete-group"> Delete Selected </a>
+
+							</div>									
+			
+						</div>
+						<!-- end widget -->
+
+					</div>
+					<!-- END CONTENT BLOCKS -->
+
+				</div>
+				<!-- END ENTITY WRAP -->
+
+				<div class="row entity-wrap">
+
+
+					<div class="entity-block">
+
+						<div class="col-sm-9 entity-block-content">
+							<img class="pull-left" src="img/entity-logo.png" />
+							<h2>Name of the Entity <span>// 32 Locations</span></h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id tristique ante, sit amet lacinia tortor. Vivamus nec dapibus turpis.</p>						
+						</div>
+
+						<div class="col-sm-3 entity-block-buttons">
+							<a href="#" class="btn btn-default btn-lg pull-right"><i class="fa fa-angle-down fa-lg"></i> </a>
+							<a href="#" class="btn btn-default btn-lg pull-right">Delete</a>
+							<a data-toggle="modal" href="#entity-editmodal" class="btn btn-default btn-lg pull-right">Edit</a>
+						</div>
+
+					</div>
+
+					<div class="entity-locations content-block">
+
+					</div>
+					<!-- END CONTENT BLOCKS -->
+
+				</div>
+				<!-- END ENTITY WRAP -->		
+
+				<div class="row entity-wrap">
+
+
+					<div class="entity-block">
+
+						<div class="col-sm-9 entity-block-content">
+							<img class="pull-left" src="img/entity-logo.png" />
+							<h2>Name of the Entity <span>// 32 Locations</span></h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id tristique ante, sit amet lacinia tortor. Vivamus nec dapibus turpis.</p>						
+						</div>
+
+						<div class="col-sm-3 entity-block-buttons">
+							<a href="#" class="btn btn-default btn-lg pull-right"><i class="fa fa-angle-down fa-lg"></i> </a>
+							<a href="#" class="btn btn-default btn-lg pull-right">Delete</a>
+							<a data-toggle="modal" href="#entity-editmodal" class="btn btn-default btn-lg pull-right">Edit</a>
+						</div>
+
+					</div>
+
+					<div class="entity-locations content-block">
+
+					</div>
+					<!-- END CONTENT BLOCKS -->
+
+				</div>
+				<!-- END ENTITY WRAP -->		
+
+				<!-- Modal -->
+				<div class="modal fade" id="entity-editmodal" tabindex="-1" role="dialog" aria-labelledby="entity-editmodalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+									&times;
+								</button>
+								<h4 class="modal-title" id="entity-editmodalLabel">Edit Entity</h4>
+							</div>
+
+							<form class="smart-form">
+
+								<div class="modal-body">
+					
+									<div class="row">
+										<div class="col-md-4">
+											<label class="label">Organization Name</label>
+										</div>
+										<div class="col-md-8">
+
+											<label class="input">
+												<input type="text">
+											</label>
+
+										</div>									
+									</div>
+
+									<div class="row">
+										<div class="col-md-4">
+											<label class="label">Logotype</label>
+										</div>
+										<div class="col-md-8">
+
+											<div class="input input-file">
+												<span class="button">
+													<input type="file" id="file" name="file" onchange="this.parentNode.nextSibling.value = this.value">
+													Browse
+												</span>
+												<input type="text" placeholder="Include some files" readonly="">
+											</div>
+
+										</div>									
+									</div>				
+
+
+									<div class="row">
+										<div class="col-md-4">
+											<label class="label">Address 1</label>
+										</div>
+										<div class="col-md-8">
+
+											<label class="input">
+												<input type="text">
+											</label>
+
+										</div>									
+									</div>	
+
+
+									<div class="row">
+										<div class="col-md-4">
+											<label class="label">Address 2</label>
+										</div>
+										<div class="col-md-8">
+
+											<label class="input">
+												<input type="text">
+											</label>
+
+										</div>									
+									</div>	
+
+
+									<div class="row">
+										<div class="col-md-4">
+											<label class="label">ZIP</label>
+										</div>
+										<div class="col-md-8">
+
+											<label class="input">
+												<input type="text">
+											</label>
+
+										</div>									
+									</div>	
+
+
+									<div class="row">
+										<div class="col-md-4">
+											<label class="label">State</label>
+										</div>
+										<div class="col-md-8">
+
+											<label class="input">
+												<input type="text">
+											</label>
+
+										</div>									
+									</div>	
+
+
+									<div class="row">
+										<div class="col-md-4">
+											<label class="label">City</label>
+										</div>
+										<div class="col-md-8">
+
+											<label class="input">
+												<input type="text">
+											</label>
+
+										</div>									
+									</div>																																																		
+					
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">
+										Cancel
+									</button>
+									<button type="button" class="btn btn-default">
+										Update
+									</button>
+								</div>
+								
+							</form>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->												
+
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+
+
+
+		<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+			}
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script>
+			if (!window.jQuery.ui) {
+				document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+			}
+		</script>
+
+		<!-- IMPORTANT: APP CONFIG -->
+		<script src="js/app.config.js"></script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+		<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> 
+
+		<!-- BOOTSTRAP JS -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+
+		<!-- EASY PIE CHARTS -->
+		<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+		<!-- SPARKLINES -->
+		<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="js/plugin/select2/select2.min.js"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+		<!-- browser msie issue fix -->
+		<script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script src="js/plugin/fastclick/fastclick.min.js"></script>
+
+		<!--[if IE 8]>
+
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+		<![endif]-->
+
+		<!-- MAIN APP JS FILE -->
+		<script src="js/app.min.js"></script>
+
+
+
+		<!-- PAGE RELATED PLUGIN(S) -->
+		<script src="js/plugin/datatables/jquery.dataTables.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.colVis.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
+		<script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+
+		<script type="text/javascript">
+
+
+			$(document).ready(function() {
+			 	
+				/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+				 *
+				 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+				 *
+				 * // activate tooltips
+				 * $("[rel=tooltip]").tooltip();
+				 *
+				 * // activate popovers
+				 * $("[rel=popover]").popover();
+				 *
+				 * // activate popovers with hover states
+				 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+				 *
+				 * // activate inline charts
+				 * runAllCharts();
+				 *
+				 * // setup widgets
+				 * setup_widgets_desktop();
+				 *
+				 * // run form elements
+				 * runAllForms();
+				 *
+				 ********************************
+				 *
+				 * pageSetUp() is needed whenever you load a page.
+				 * It initializes and checks for all basic elements of the page
+				 * and makes rendering easier.
+				 *
+				 */
+				
+				 pageSetUp();
+
+				 
+				 
+				/* // DOM Position key index //
+			
+				l - Length changing (dropdown)
+				f - Filtering input (search)
+				t - The Table! (datatable)
+				i - Information (records)
+				p - Pagination (paging)
+				r - pRocessing 
+				< and > - div elements
+				<"#id" and > - div with an id
+				<"class" and > - div with a class
+				<"#id.class" and > - div with an id and class
+				
+				Also see: http://legacy.datatables.net/usage/features
+				*/	
+
+					var responsiveHelper_dt_basic = undefined;
+					var responsiveHelper_datatable_fixed_column = undefined;
+					var responsiveHelper_datatable_col_reorder = undefined;
+					var responsiveHelper_datatable_tabletools = undefined;
+					
+					var breakpointDefinition = {
+						tablet : 1024,
+						phone : 480
+					};
+		
+					$('#locations-table').dataTable({
+						"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>"+
+							"t"+
+							"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+						"autoWidth" : true,
+						"preDrawCallback" : function() {
+							// Initialize the responsive datatables helper once.
+							if (!responsiveHelper_dt_basic) {
+								responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#locations-table'), breakpointDefinition);
+							}
+						},
+						"rowCallback" : function(nRow) {
+							responsiveHelper_dt_basic.createExpandIcon(nRow);
+						},
+						"drawCallback" : function(oSettings) {
+							responsiveHelper_dt_basic.respond();
+						}
+					});
+		
+				/* END BASIC */						
+				
+			})
+		
+		</script>
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+				_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</body>
+
+</html>
