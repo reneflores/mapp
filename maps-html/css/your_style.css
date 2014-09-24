@@ -233,7 +233,7 @@ h2 span {
 }
 
 .sustainhawaii-admin #ribbon {
-	height: 80px;
+	min-height: 80px;
 	border-bottom: 3px solid rgba(0,0,0,0.3);
 	background: #FFF;
 	padding: 15px 30px;
@@ -1443,4 +1443,339 @@ div.dataTables_info {
 
 .menu-items-drag .btn.btn-default.btn-sm {
 	margin-left: 5px;
+}
+
+
+
+/* Front End Styling */
+
+
+
+
+/* Responsive Styling */
+
+
+.mobile-view-activated.sustainhawaii-admin.hidden-menu #left-panel {
+	left: 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin #left-panel {
+	left: -360px;
+}
+
+
+.mobile-view-activated.sustainhawaii-admin #ribbon {
+	padding: 15px;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.mobile-view-activated.sustainhawaii-admin #ribbon .btn {
+    margin-left: 5px;
+    width: 100%;
+    margin: 10px 0px 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin #ribbon .page-title {
+	display: block;
+	font-size: 18px;
+}
+
+.mobile-view-activated.sustainhawaii-admin #ribbon .page-title i {
+	display: none;
+}
+
+.mobile-view-activated.sustainhawaii-admin #content {
+	padding: 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin #main { 
+	margin: 0px;
+	padding: 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin table.has-columns-hidden > tbody > tr.row-detail > td > ul {
+	padding-left: 30px;
+
+}
+
+.mobile-view-activated.sustainhawaii-admin table.has-columns-hidden > tbody > tr.row-detail > td > ul li:first-child {
+	display: none;
+}
+
+.mobile-view-activated.sustainhawaii-admin #ribbon .page-title span {
+    font-size: 18px;
+    padding-left: 25px;
+    margin-left: 5px;
+    vertical-align: 0px;
+}
+
+#mobile-navigation {
+	display: none;
+}
+
+
+.mobile-view-activated #left-panel {
+	margin-top: 80px;
+}
+
+.mobile-view-activated #left-panel #header {
+	display: none;
+}
+
+.mobile-view-activated.sustainhawaii-admin #mobile-navigation {
+	display: block;
+}
+
+.mobile-view-activated.sustainhawaii-admin #mobile-navigation #header,
+.mobile-view-activated.sustainhawaii-admin #mobile-navigation #header > :first-child {
+	height: 80px;
+	display: block;
+	width: 100% !important;
+	clear: both;
+}
+
+.mobile-view-activated.sustainhawaii-admin #mobile-navigation #logo-group > span#logo-mobile {
+	font-size: 26px;
+	font-weight: 700;
+	color: #FFF;
+	margin: 20px 0px 20px 15px;
+}
+
+.header-buttons {
+	margin: 22px 15px 0px 0px;
+}
+
+#mobile-navigation .header-buttons a {
+	margin-left: 8px;
+	color: rgba(250,250,250,0.70);
+}
+
+#mobile-navigation .header-buttons a:hover {
+	color: rgba(250,250,250,1);
+}
+
+#mobile-navigation .header-buttons a i {
+	font-size: 36px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .data-header-buttons {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+	margin-top: 10px;
+	padding-left: 40px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .data-header-buttons .btn.btn-default {
+	float: left !important;
+	font-size: 13px;
+	padding: 10px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .big-form .inputWrap, 
+.mobile-view-activated.sustainhawaii-admin .inputWrap {
+    padding: 5px;
+    margin: 0px 0px 10px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .smart-form label.label {
+	/*margin-left: 0px;*/
+}
+
+.mobile-view-activated.sustainhawaii-admin .section-new .btn {
+	width: 100%;
+	margin: 10px 0px 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .note-editor .note-toolbar > .btn-group {
+    margin: 0px 5px 5px 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .note-toolbar .btn.btn-default {
+	font-size: 12px;
+}
+
+.mobile-view-activated .textarea-top a.btn.btn-default { 
+	display: block;
+	clear: both;
+	width: 100%;
+	margin: 0px 0px 5px;
+}
+
+.mobile-view-activated .smart-form.big-form .row.data-wrap > div.content-block table tbody td {
+	font-size: 12px;
+}
+
+.mobile-view-activated .table > thead > tr > th,
+.mobile-view-activated .table > tbody > tr > td { 
+	padding: 10px 5px;
+}
+
+.mobile-view-activated .data-locations .table > thead > tr > th:first-child,
+.mobile-view-activated .data-locations .table > tbody > tr > td:first-child,
+.mobile-view-activated .data-locations .table > thead > tr > th:nth-child(4n),
+.mobile-view-activated .data-locations .table > tbody > tr > td:nth-child(4n) {
+	display: none;
+}
+
+.mobile-view-activated .smart-form.big-form .row.data-wrap > div.content-block .btn-instructions {
+	display: none;
+}
+
+.mobile-view-activated .smart-form.big-form .row.data-wrap > div.content-block table thead th {
+	font-size: 10px;
+}
+
+.mobile-view-activated .modal-title {
+    font-size: 18px;
+}
+
+.mobile-view-activated .modal .smart-form .row {
+    margin: 0px;
+    padding: 5px 0px 9px;
+}
+
+.mobile-view-activated .modal .smart-form label.label { 
+	margin-left: 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .modal .btn.btn-default {
+	font-size: 14px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .modal-header .close {
+    height: 26px;
+    min-width: 26px;
+    font-size: 26px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .smart-form.big-form .row > div.col-md-4 {
+	margin: 5px 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .row.content-footer {
+	margin: 15px 0px 0px !important;
+}
+
+.mobile-view-activated.sustainhawaii-admin .row .row-Title {
+	margin: 15px 30px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .smart-form.big-form .row {
+	margin: 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .smart-form .inputWrap select.input-lg + i {
+	height: 23px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .smart-form.big-form .input input, 
+.mobile-view-activated.sustainhawaii-admin .smart-form .textarea textarea, 
+.mobile-view-activated.sustainhawaii-admin .smart-form select.input-lg  {
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.mobile-view-activated.sustainhawaii-admin #ribbon {
+	min-height: 60px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .section-divider > div { 
+	padding: 0 15px !important;
+}
+
+.mobile-view-activated.sustainhawaii-admin .smart-form label.label { 
+	padding: 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .smart-form .section-divider label.label {
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .entity-block > div h2 {
+	font-size: 20px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .entity-block > div h2 span {
+	float: none;
+	margin-bottom: 5px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .entity-block > div p {
+	margin: 0px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .entity-block > div a.pull-right {
+	float: none !important;
+}
+
+.mobile-view-activated.sustainhawaii-admin .nav-tabs > li {
+	display: block;
+	clear: both;
+	width: 100%;
+}
+
+.mobile-view-activated.sustainhawaii-admin .nav-tabs.tab-share > li {
+	width: auto;
+	display: inline-block;
+	clear: none;
+}
+
+.mobile-view-activated.sustainhawaii-admin .nav-tabs > li > a {
+	width: 100%;
+	margin-right: 0px;
+	padding: 10px 15px;
+	font-size: 18px;
+}
+
+.mobile-view-activated.sustainhawaii-admin .btn-group .btn.btn-default {
+    font-size: 12px;
+    box-shadow: none;
+    line-height: 50px;
+}
+
+
+.mobile-view-activated.sustainhawaii-admin .tab-content.tab-frontend {
+    background: none repeat scroll 0% 0% #FFF;
+    padding: 5px;
+    margin-top: 1px;
+}
+
+/* Responsive screen size based rules */
+
+@media only screen and (min-width:747px) and (max-width:1044px) {
+/* Ipad and Small Res Computers */
+
+	.sustainhawaii-admin #ribbon .page-title,
+	.mobile-view-activated.sustainhawaii-admin #ribbon .page-title {
+	    display: block;
+	    font-size: 28px;
+	}
+
+	.sustainhawaii-admin #ribbon .page-title {
+		margin-top: 7px;
+	}
+
+	.mobile-view-activated.sustainhawaii-admin #ribbon .page-title {
+		margin-top: 10px;
+	}
+
+	.sustainhawaii-admin #ribbon .page-title i {
+    	font-size: 30px;
+   		width: 30px;
+	}
+
+	.sustainhawaii-admin #ribbon .page-title span {
+    	font-size: 26px;
+    	vertical-align: 0px;
+	}
+	
+	.mobile-view-activated.sustainhawaii-admin #ribbon .page-title span {
+    	font-size: 26px;
+	}
+
 }

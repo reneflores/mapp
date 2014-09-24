@@ -1,7 +1,0 @@
-{% if packages %}
-  <ul class="dataset-list unstyled dd-list">
-    {% for package in packages %}
-      {% snippet 'snippets/package_item.html', package=package, item_class="dd-item dd-handle", hide_resources=hide_resources, banner=banner, truncate=truncate, truncate_title=truncate_title %}
-    {% endfor %}
-  </ul>
-{% endif %}
